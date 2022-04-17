@@ -1,0 +1,41 @@
+.signup {
+    width: 80%;
+    height:auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    background: gainsboro;
+    border-color:whitesmoke;
+    border-radius: 4px;
+    box-shadow: 0 2px 7px 5px rgb(100%, 100%, 100%);
+
+}
+.signup h1{
+    font-weight: bold;
+    text-align: center;
+}
+/*
+.signup mat-form-field{
+    color: white;
+}
+.signup mat-form-field mat-label{
+    color: white;
+}
+*/
+.signup mat-form-field{
+    
+    height: 50px;
+    border-radius: 5px;
+   
+}
+.signup mat-form-field select{
+    
+    height: 60px;
+    border-radius: 5px;
+   
+}
+
+.error {
+    color: red;
+}

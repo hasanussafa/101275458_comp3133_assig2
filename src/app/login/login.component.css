@@ -1,0 +1,22 @@
+.login {
+    width: 80%;
+    height:auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    background: gainsboro;
+    border-color:whitesmoke;
+    border-radius: 4px;
+    box-shadow: 0 2px 7px 5px rgb(100%, 100%, 100%);
+}
+
+.login mat-form-field input{
+    
+    height: 30px;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+}

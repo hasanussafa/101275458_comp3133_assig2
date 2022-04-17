@@ -1,0 +1,25 @@
+.book {
+    width: 80%;
+    height:auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    background: gainsboro;
+    border-color:whitesmoke;
+    border-radius: 4px;
+    box-shadow: 0 2px 7px 5px rgb(100%, 100%, 100%);
+
+}
+.book mat-form-field{
+    
+    height: 50px;
+    border-radius: 5px;
+   
+}
+.book mat-form-field select{
+    
+    height: 60px;
+    border-radius: 5px;
+   
+}

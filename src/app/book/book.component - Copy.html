@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+<app-navbar></app-navbar>
+
+<h1>Book</h1>
+      <div>
+      <hr>
+      </div>
+      <br>
+
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
+  <div class="book">
+  <h1>Booking listing id {{ listing_id }}</h1>
+  <mat-form-field>
+    <mat-label>Booking ID: </mat-label>
+          <input matInput formControlName="booking_id" placeholder="booking_id" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Booking start: </mat-label>
+          <input matInput type="date" formControlName="booking_start" placeholder="booking_start" required>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Booking End: </mat-label>
+          <input matInput type="date" formControlName="booking_end" placeholder="booking_end" required>
+  </mat-form-field>
+
+    <button type="submit">Submit</button>
+  </div>
+</form>
+</body>
+</html>
+

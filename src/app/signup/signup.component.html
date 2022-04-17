@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+<app-navbar></app-navbar>
+<br>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <div class="signup">
+
+      <h1>User Sign-Up (All fields are mandatory)</h1>
+      <div>
+      <hr>
+      </div>
+      <br>
+      
+     
+      <mat-form-field>
+        First Name:
+          <input matInput formControlName="first_name" required>
+      </mat-form-field>
+    
+      <mat-form-field>
+        Last Name:
+          <input matInput formControlName="last_name" required>
+      </mat-form-field>
+     
+      <mat-form-field>
+        Email:
+          <input matInput formControlName="email" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        Username: 
+        <input matInput formControlName="user_name"  required>
+      </mat-form-field>
+     
+      <mat-form-field class="password">
+        Password:
+          <input type="password" matInput formControlName="password" required>
+      </mat-form-field><br>
+     
+     
+      <mat-form-field>
+        <mat-label>Customer Type</mat-label>
+        <select matNativeControl formControlName="type">
+          <option value="admin">Admin</option>
+          <option value="customer">Customer</option>
+        </select>
+      </mat-form-field>
+      <button mat-button type="submit">Sign Up</button>
+      <button mat-button [routerLink]="['/login']">Login</button>
+  </div>
+</form>
+</body>
+</html>

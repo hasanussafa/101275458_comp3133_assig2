@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+<app-navbar></app-navbar>
+<h1>Welcome Admin</h1>
+<div>
+    <hr>
+    </div>
+    <br>
+
+<mat-tab-group dynamicHeight>
+    <mat-tab label="Manage Listings">
+        <div>
+            <div fxLayout="row wrap" fxLayoutGap="15px grid">
+              <div fxFlex="40%" fxFlex.xs="80%" fxFlex.sm="25%" *ngFor="let listing of listings; let i = index">
+                <mat-card class="mat-elevation-z4" >
+                    <mat-card-header>
+                      <mat-card-title>{{listing.listing_title}}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <p>username: {{listing.username}}</p>
+                      <p>ID: {{listing.id}}</p>
+                      <p>listing_id: {{listing.listing_id}}</p>
+                      <p>description: {{listing.description}}</p>
+                      <p>street: {{listing.street}}</p>
+                      <p>city: {{listing.city}}</p>
+                      <p>postal_code: {{listing.postal_code}}</p>
+                      <p>email: {{listing.email}}</p>
+                      <p>price: {{listing.price}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button (click)="delete(listing.id)">Delete</button>
+                    </mat-card-actions>
+                  </mat-card>
+              </div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Add Listing">
+            <form [formGroup]="createListingForm" (ngSubmit)="onSubmitCreateListingForm()">
+                <div class="admin_page">
+                    <mat-form-field>
+                        <input matInput formControlName="listing_id" placeholder="listing id" required>
+                    </mat-form-field>
+                    
+                    <mat-form-field>
+                        <input matInput formControlName="listing_title" placeholder="listing title" required>
+                    </mat-form-field>
+                    
+                    <mat-form-field>
+                        <textarea matInput formControlName="description" placeholder="description" required></textarea>
+                    </mat-form-field>
+                  
+                    <mat-form-field>
+                        <input matInput formControlName="street" placeholder="street" required>
+                    </mat-form-field>
+                    
+                    <mat-form-field>
+                        <input matInput formControlName="city" placeholder="city" required>
+                    </mat-form-field>
+                    
+                    <mat-form-field>
+                        <input matInput formControlName="postal_code" placeholder="postal code" required>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput formControlName="email" placeholder="email" required>
+                    </mat-form-field>
+                   
+                    <mat-form-field>
+                        <input type="number" matInput formControlName="price" placeholder="price" required>
+                    </mat-form-field>      
+                   
+                    <button mat-button type="submit">Submit</button>
+                </div>
+            </form>
+    </mat-tab>
+</mat-tab-group>
+</body>
+</html>

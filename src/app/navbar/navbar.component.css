@@ -1,0 +1,11 @@
+.navbar{
+    
+    height: 100%;
+   /* background-color: #0066A3;*/
+   flex: 1 1 auto;
+}
+
+a {
+
+    text-decoration: none;
+}

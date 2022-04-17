@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+</head>
+<body>
+<app-navbar></app-navbar>
+<br>
+<form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+  <div class="signup">
+
+      <h1>User Sign-Up (All fields are mandatory)</h1>
+      <div>
+      <hr>
+      </div>
+      <br>
+      
+     
+      <mat-form-field>
+        <mat-label>First Name: </mat-label>
+          <input matInput formControlName="first_name" placeholder="First name" required>
+      </mat-form-field>
+    
+      <mat-form-field>
+        <mat-label>Last Name: </mat-label>
+          <input matInput formControlName="last_name" placeholder="Last name" required>
+      </mat-form-field>
+     
+      <mat-form-field>
+        <mat-label>Email: </mat-label>
+          <input matInput formControlName="email" placeholder="Email" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Username: </mat-label>
+        <input matInput formControlName="user_name" placeholder="User name" required>
+      </mat-form-field>
+     
+      <mat-form-field class="password">
+        <mat-label>Password: </mat-label>
+          <input type="password" matInput formControlName="password" placeholder="Password" required>
+      </mat-form-field><br>
+     
+     
+      <mat-form-field>
+        <mat-label>Customer Type</mat-label>
+        <select matNativeControl formControlName="type">
+          <option value="admin">Admin</option>
+          <option value="customer">Customer</option>
+        </select>
+      </mat-form-field>
+      <button mat-button type="submit">Sign Up</button>
+      <button mat-button [routerLink]="['/login']">Login</button>
+  </div>
+</form>
+</body>
+</html>

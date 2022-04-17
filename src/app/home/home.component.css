@@ -1,0 +1,23 @@
+.home{
+    width: 80%;
+    height:auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    background: gainsboro;
+    border-color:whitesmoke;
+    border-radius: 4px;
+    box-shadow: 0 2px 7px 5px rgb(100%, 100%, 100%);
+}
+.home h2{
+    text-align: center;
+}
+.paregraph{
+    width: 100%;
+    margin-top: -3%;
+    position: relative;
+    padding: 5%;
+    text-align: justify;
+    text-justify: inter-word;
+}
